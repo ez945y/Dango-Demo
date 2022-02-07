@@ -41,6 +41,7 @@ urlpatterns = [
     path('users_list/', restaurants.views.list,
          {'model': django.contrib.auth.models.User}),
     path('test/', restaurants.views.test),
+    path(r'', TemplateView.as_view(template_name='index.html')),
 ]
 if settings.DEBUG:
     urlpatterns += [
@@ -50,3 +51,4 @@ if settings.DEBUG:
         restaurants.views.list, {'model': restaurants.models.Restaurant}))"""
     """path('restaurants_list/', restaurants.views.list,
             {'model': restaurants.models.Restaurant}),"""
+

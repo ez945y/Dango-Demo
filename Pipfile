@@ -11,6 +11,7 @@ autopep8 = "*"
 dj-database-url = "*"
 gunicorn = "*"
 dj-static = "*"
+django-heroku = "*"
 
 [dev-packages]
 
