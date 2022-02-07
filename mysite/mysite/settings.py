@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-nz(7**n@xf7!)1*h*w^i=0%1ezhfus9uhao^=xo2nawl(wrapx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['testserver']
+ALLOWED_HOSTS = ['*']
 LOGIN_REDIRECT_URL = "/index/"
 
 STATIC_URL = '/static/'
