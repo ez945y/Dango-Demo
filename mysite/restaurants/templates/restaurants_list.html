@@ -18,15 +18,19 @@
                 <th>店名</th>
                 <th>電話</th>
                 <th>地址</th>
-                <th>評價</th>
+                {% if perms.restaurants.can_comment %}
+                    <th>評價</th>
+                {% endif %}
             </tr>
-            {% for r in restaurants %}
+            {% for r in restaurants%}
                 <tr>
                     <td> <input type="radio" name="id" value="{{r.id}}"> </td>
-                    <td> <a href="/menu/?id={{r.id}}"> {{r.name}} </a></td>
+                    <td> <a href="/menu/{{r.id}}"> {{r.name}} </a></td>
                     <td> {{ r.phone_number }} </td>
                     <td> {{ r.address }} </td>
-                    <td> <a href="/comment/{{r.id}}/"> comment </a> </td>
+                    {% if perms.restaurants.can_comment %}
+                        <td> <a href="/comment/{{r.id}}/"> comment </a> </td>
+                    {% endif %}
                     <!--<td> <a href="/menu/{{r.id}}"> menu </a></td>-->
                 </tr>
             {% endfor %}

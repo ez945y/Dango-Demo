@@ -40,18 +40,18 @@
             <table>
                 <tr>
                     <th> <label for="id_visitor">留言者:</label> </th>
-                    <td> {{ f.visitor }} </td>
-                    <td> {{ f.visitor.errors }} </td>
+                    <td> {{ form.visitor }} </td>
+                    <td> {{ form.visitor.errors }} </td>
                 </tr>
                 <tr>
                     <th> <label for="id_email">電子信箱:</label> </th>
-                    <td> {{ f.email }} </td>
-                    <td> {{ f.email.errors }} </td>
+                    <td> {{ form.email }} </td>
+                    <td> {{ form.email.errors }} </td>
                 </tr>
                 <tr>
                     <th> <label for="id_content">評價:</label> </th>
-                    <td> {{ f.content }} </td>
-                    <td> {{ f.content.errors }} </td>
+                    <td> {{ form.content }} </td>
+                    <td> {{ form.content.errors }} </td>
                 </tr>
             </table>
             <input type="submit" value="給予評價">

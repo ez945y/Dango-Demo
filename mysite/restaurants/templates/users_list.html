@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %} 使用者列表 {% endblock %}
+{% block content %}
+    <table>
+        <tr>
+            <th>使用者帳號</th>
+            <th>使用者姓名</th>
+        </tr>
+        {% for u in objs %}
+        <tr>
+            <td>{{u.username}}</td>
+            <td>{{u.last_name}}{{u.first_name}}</td>
+        </tr>
+        {% endfor %}
+    <table>
+{% endblock %}

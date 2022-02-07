@@ -29,11 +29,17 @@ SECRET_KEY = 'django-insecure-nz(7**n@xf7!)1*h*w^i=0%1ezhfus9uhao^=xo2nawl(wrapx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['testserver']
 LOGIN_REDIRECT_URL = "/index/"
 
-# Application definition
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+
+# Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,7 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'restaurants'
+    'restaurants',
+    'zoo',
 ]
 
 MIDDLEWARE = [
