@@ -10,15 +10,23 @@
         "--django-settings-module=<mainapp>.settings",
     ],
     "files.trimTrailingWhitespace": true, // 儲存的時候，會幫你自動過濾多餘的空格
-    "files.autoSave": "onFocusChange", // 是否自動儲存檔案
+    //"files.autoSave": "onFocusChange", // 是否自動儲存檔案
+    "files.autoSave": "onWindowChange",
+    //"editor.formatOnSave": true, //存檔後自動執行
+    //"prettier.singleQuote": true, //使用單引號
+
     "[python]":{
         "editor.formatOnType": true,
         "editor.formatOnSave": true,
         "editor.insertSpaces": true,
         "editor.detectIndentation": true,
         "editor.tabSize": 4,
-        "editor.wordWrap": "on"
+        "editor.wordWrap": "on",
+        "editor.bracketPairColorization.enabled": true,
+        "editor.guides.bracketPairs":"active"
+
     },
     "git.ignoreLimitWarning": true,
+
 
 }
