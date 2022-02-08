@@ -27,6 +27,10 @@
 
     },
     "git.ignoreLimitWarning": true,
-
-
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.host": "127.0.0.1",
+    "liveServer.settings.port": 8080, //設定本地PORT
+    "liveServer.settings.root": "./dist/", //設定根目錄
+    "liveServer.settings.CustomBrowser": "chrome", //設置默認瀏覽器
+    "liveServer.settings.donotVerifyTags":true
 }
